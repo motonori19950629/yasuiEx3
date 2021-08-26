@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     //計算実行ボタンアクション
     @IBAction func runCalcButton(_ sender: Any) {
 
-        //各String?をint?に変換しintに変換。未入力や文字列が入力された際は０に変換
+        //各String?をint?に変換しintに変換。未入力や文字列が入力された際は0に変換
         let value1 = Int(number1TextField.text ?? "") ?? 0
         let value2 = Int(number2TextField.text ?? "") ?? 0
 
@@ -46,7 +46,7 @@ class ViewController: UIViewController {
         resultLabel.text = "\(result)"
     }
 
-    //数値とスイッチによって符号変換を行う関数
+    //数値とスイッチによって符号変換を行うメソッド
     func switchPrusMinus(val: Int, plusMinusSwitch: Bool) -> Int {
 
         //デフォで符号変換なし
