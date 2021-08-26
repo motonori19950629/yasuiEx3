@@ -17,14 +17,14 @@ class ViewController: UIViewController {
     @IBOutlet private weak var plusMinus1Switch: UISwitch!
     @IBOutlet private weak var plusMinus2Switch: UISwitch!
 
-    //符号付きnumber表示ラベル
+    //符号変換後number表示ラベル（初期値は0）
     @IBOutlet private weak var number1Label: UILabel!
     @IBOutlet private weak var number2Label: UILabel!
 
-    //結果表示ラベル
+    //結果表示ラベル（初期値は0）
     @IBOutlet private weak var resultLabel: UILabel!
 
-    //計算実行ボタン
+    //計算実行ボタンアクション
     @IBAction func runCalcButton(_ sender: Any) {
 
         //各String?をint?に変換しintに変換。未入力や文字列が入力された際は０に変換
@@ -44,7 +44,6 @@ class ViewController: UIViewController {
 
         //結果表示ラベルに表示
         resultLabel.text = "\(result)"
-
     }
 
     //数値とスイッチによって符号変換を行う関数
@@ -60,7 +59,6 @@ class ViewController: UIViewController {
 
         //結果を返す
         return value
-
     }
 }
 
