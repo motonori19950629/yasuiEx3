@@ -47,18 +47,12 @@ class ViewController: UIViewController {
     }
 
     // 数値とスイッチによって符号変換を行うメソッド
-    func switchPrusMinus(val: Int, plusMinusSwitch: Bool) -> Int {
-
-        // 戻り値
-        let value: Int
-
+    private func switchPrusMinus(val: Int, plusMinusSwitch: Bool) -> Int {
         // スイッチがオンで符号変換
-        if plusMinusSwitch == true {
-            value = val * -1
+        if plusMinusSwitch {
+            return -val
         } else {
-            value = val
+            return val
         }
-
-        return value
     }
 }
